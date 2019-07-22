@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<style>
+#container {
+	min-width: 280px;
+	max-width: 700px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+
+<div id="container"></div>
+<!-- <div id="container"></div> -->
+<script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'packedbubble',
+        height: '100%'
+    },
+    title: {
+        text: 'Percentage of Children Not Vaccinated (2014)'
+    },
+    tooltip: {
+        useHTML: true,
+        pointFormat: '<b>{point.name}:</b> {point.truth}%'
+    },
+    plotOptions: {
+        packedbubble: {
+            minSize: '30%',
+            maxSize: '120%',
+            zMin: 0,
+            zMax: 1000,
+            layoutAlgorithm: {
+                splitSeries: false,
+                gravitationalConstant: 0.02
+            },
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
+        }
+    },
+    series:  [{
+		  name: "Punjab",
+		  data: [{
+		    name: "Layyah",
+		    column: "No",
+		    count: 4,
+		    truth: 0.7,
+		    province: "Punjab",
+		    value: 70
+		  }, {
+		    name: "Rajanpur",
+		    column: "No",
+		    count: 5,
+		    truth: 0.7,
+		    province: "Punjab",
+		    value: 70
+		  }, {
+		    name: "Kasur",
+		    column: "No",
+		    count: 4,
+		    truth: 0.8,
+		    province: "Punjab",
+		    value: 80
+		  }, {
+		    name: "Gujrat",
+		    column: "No",
+		    count: 4,
+		    truth: 1.1,
+		    province: "Punjab",
+		    value: 110
+		  }, {
+		    name: "Lodhran",
+		    column: "No",
+		    count: 9,
+		    truth: 1.1,
+		    province: "Punjab",
+		    value: 110
+		  }, {
+		    name: "Multan",
+		    column: "No",
+		    count: 15,
+		    truth: 1.2,
+		    province: "Punjab",
+		    value: 120
+		  }, {
+		    name: "Muzaffargarh",
+		    column: "No",
+		    count: 22,
+		    truth: 1.2,
+		    province: "Punjab",
+		    value: 120
+		  }, {
+		    name: "Chakwal",
+		    column: "No",
+		    count: 4,
+		    truth: 1.3,
+		    province: "Punjab",
+		    value: 130
+		  }, {
+		    name: "Jhelum",
+		    column: "No",
+		    count: 4,
+		    truth: 1.3,
+		    province: "Punjab",
+		    value: 130
+		  }, {
+		    name: "Mandi bahauddin",
+		    column: "No",
+		    count: 6,
+		    truth: 1.3,
+		    province: "Punjab",
+		    value: 130
+		  }, {
+		    name: "T.T. Singh",
+		    column: "No",
+		    count: 11,
+		    truth: 1.3,
+		    province: "Punjab",
+		    value: 130
+		  }, {
+		    name: "Hafizabad",
+		    column: "No",
+		    count: 10,
+		    truth: 1.4,
+		    province: "Punjab",
+		    value: 140
+		  }, {
+		    name: "Sialkot",
+		    column: "No",
+		    count: 8,
+		    truth: 1.4,
+		    province: "Punjab",
+		    value: 140
+		  }, {
+		    name: "Attock",
+		    column: "No",
+		    count: 7,
+		    truth: 1.5,
+		    province: "Punjab",
+		    value: 150
+		  }, {
+		    name: "D. G. Khan",
+		    column: "No",
+		    count: 28,
+		    truth: 1.5,
+		    province: "Punjab",
+		    value: 150
+		  }, {
+		    name: "Gujranwala",
+		    column: "No",
+		    count: 9,
+		    truth: 1.5,
+		    province: "Punjab",
+		    value: 150
+		  }, {
+		    name: "Khanewal",
+		    column: "No",
+		    count: 18,
+		    truth: 1.6,
+		    province: "Punjab",
+		    value: 160
+		  }, {
+		    name: "Lahore",
+		    column: "No",
+		    count: 7,
+		    truth: 1.6,
+		    province: "Punjab",
+		    value: 160
+		  }, {
+		    name: "Nankana sahib",
+		    column: "No",
+		    count: 7,
+		    truth: 1.6,
+		    province: "Punjab",
+		    value: 160
+		  }, {
+		    name: "Narowal",
+		    column: "No",
+		    count: 12,
+		    truth: 1.9,
+		    province: "Punjab",
+		    value: 190
+		  }, {
+		    name: "Okara",
+		    column: "No",
+		    count: 9,
+		    truth: 1.9,
+		    province: "Punjab",
+		    value: 190
+		  }, {
+		    name: "Sahiwal",
+		    column: "No",
+		    count: 9,
+		    truth: 1.9,
+		    province: "Punjab",
+		    value: 190
+		  }, {
+		    name: "Bahawalpur",
+		    column: "No",
+		    count: 37,
+		    truth: 2.2,
+		    province: "Punjab",
+		    value: 220
+		  }, {
+		    name: "Pakpattan",
+		    column: "No",
+		    count: 12,
+		    truth: 2.2,
+		    province: "Punjab",
+		    value: 220
+		  }, {
+		    name: "Rahim Yar Khan",
+		    column: "No",
+		    count: 58,
+		    truth: 2.2,
+		    province: "Punjab",
+		    value: 220
+		  }, {
+		    name: "Rawalpindi",
+		    column: "No",
+		    count: 9,
+		    truth: 2.2,
+		    province: "Punjab",
+		    value: 220
+		  }, {
+		    name: "Sheikhupura",
+		    column: "No",
+		    count: 18,
+		    truth: 2.2,
+		    province: "Punjab",
+		    value: 220
+		  }, {
+		    name: "Sargodha",
+		    column: "No",
+		    count: 18,
+		    truth: 2.6,
+		    province: "Punjab",
+		    value: 260
+		  }, {
+		    name: "Vehari",
+		    column: "No",
+		    count: 13,
+		    truth: 2.6,
+		    province: "Punjab",
+		    value: 260
+		  }, {
+		    name: "Mianwali",
+		    column: "No",
+		    count: 20,
+		    truth: 3.1,
+		    province: "Punjab",
+		    value: 310
+		  }, {
+		    name: "Jhang",
+		    column: "No",
+		    count: 42,
+		    truth: 3.2,
+		    province: "Punjab",
+		    value: 320
+		  }, {
+		    name: "Bhakkar",
+		    column: "No",
+		    count: 34,
+		    truth: 3.8,
+		    province: "Punjab",
+		    value: 380
+		  }, {
+		    name: "Islamabad",
+		    column: "No",
+		    count: 17,
+		    truth: 4.3,
+		    province: "Punjab",
+		    value: 430
+		  }, {
+		    name: "Chiniot",
+		    column: "No",
+		    count: 23,
+		    truth: 4.4,
+		    province: "Punjab",
+		    value: 440
+		  }, {
+		    name: "Faisalabad",
+		    column: "No",
+		    count: 41,
+		    truth: 4.6,
+		    province: "Punjab",
+		    value: 460
+		  }, {
+		    name: "Khushab",
+		    column: "No",
+		    count: 38,
+		    truth: 5,
+		    province: "Punjab",
+		    value: 500
+		  }, {
+		    name: "Bahawalnagar",
+		    column: "No",
+		    count: 35,
+		    truth: 5.5,
+		    province: "Punjab",
+		    value: 550
+		  }]
+		}, {
+		  name: "Sindh",
+		  data: [{
+		    name: "Hyderabad",
+		    column: "No",
+		    count: 1,
+		    truth: 0.3,
+		    province: "Sindh",
+		    value: 30
+		  }, {
+		    name: "Shaheed Benazir Abad",
+		    column: "No",
+		    count: 3,
+		    truth: 0.5,
+		    province: "Sindh",
+		    value: 50
+		  }, {
+		    name: "Sukkur",
+		    column: "No",
+		    count: 3,
+		    truth: 0.5,
+		    province: "Sindh",
+		    value: 50
+		  }, {
+		    name: "Khairpur",
+		    column: "No",
+		    count: 5,
+		    truth: 0.6,
+		    province: "Sindh",
+		    value: 60
+		  }, {
+		    name: "Umer Kot",
+		    column: "No",
+		    count: 5,
+		    truth: 0.6,
+		    province: "Sindh",
+		    value: 60
+		  }, {
+		    name: "Ghotki",
+		    column: "No",
+		    count: 11,
+		    truth: 1,
+		    province: "Sindh",
+		    value: 100
+		  }, {
+		    name: "Shahdadkot",
+		    column: "No",
+		    count: 10,
+		    truth: 1,
+		    province: "Sindh",
+		    value: 100
+		  }, {
+		    name: "Mirpur Khas",
+		    column: "No",
+		    count: 7,
+		    truth: 1.1,
+		    province: "Sindh",
+		    value: 110
+		  }, {
+		    name: "Tando Mohammad Khan",
+		    column: "No",
+		    count: 9,
+		    truth: 1.2,
+		    province: "Sindh",
+		    value: 120
+		  }, {
+		    name: "Kashmore",
+		    column: "No",
+		    count: 17,
+		    truth: 1.4,
+		    province: "Sindh",
+		    value: 140
+		  }, {
+		    name: "Jacobabad",
+		    column: "No",
+		    count: 16,
+		    truth: 1.5,
+		    province: "Sindh",
+		    value: 150
+		  }, {
+		    name: "Badin",
+		    column: "No",
+		    count: 18,
+		    truth: 1.7,
+		    province: "Sindh",
+		    value: 170
+		  }, {
+		    name: "Thatta",
+		    column: "No",
+		    count: 7,
+		    truth: 1.8,
+		    province: "Sindh",
+		    value: 180
+		  }, {
+		    name: "Larkana",
+		    column: "No",
+		    count: 10,
+		    truth: 1.9,
+		    province: "Sindh",
+		    value: 190
+		  }, {
+		    name: "Shikarpur",
+		    column: "No",
+		    count: 23,
+		    truth: 2.5,
+		    province: "Sindh",
+		    value: 250
+		  }, {
+		    name: "Sanghar",
+		    column: "No",
+		    count: 14,
+		    truth: 2.8,
+		    province: "Sindh",
+		    value: 280
+		  }, {
+		    name: "Sujawal",
+		    column: "No",
+		    count: 11,
+		    truth: 3,
+		    province: "Sindh",
+		    value: 300
+		  }, {
+		    name: "Tharparkar",
+		    column: "No",
+		    count: 29,
+		    truth: 3.1,
+		    province: "Sindh",
+		    value: 310
+		  }, {
+		    name: "Naushahro Feroze",
+		    column: "No",
+		    count: 14,
+		    truth: 3.4,
+		    province: "Sindh",
+		    value: 340
+		  }, {
+		    name: "Karachi",
+		    column: "No",
+		    count: 11,
+		    truth: 3.5,
+		    province: "Sindh",
+		    value: 350
+		  }, {
+		    name: "Jamshoro",
+		    column: "No",
+		    count: 21,
+		    truth: 4.2,
+		    province: "Sindh",
+		    value: 420
+		  }, {
+		    name: "Dadu",
+		    column: "No",
+		    count: 48,
+		    truth: 12.4,
+		    province: "Sindh",
+		    value: 1240
+		  }]
+		}, {
+		  name: "Khyber Pakhtunkhwa",
+		  data: [{
+		    name: "Mardan",
+		    column: "No",
+		    count: 3,
+		    truth: 0.6,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 60
+		  }, {
+		    name: "Peshawar",
+		    column: "No",
+		    count: 3,
+		    truth: 0.7,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 70
+		  }, {
+		    name: "Nowshera",
+		    column: "No",
+		    count: 3,
+		    truth: 1,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 100
+		  }, {
+		    name: "Haripur",
+		    column: "No",
+		    count: 5,
+		    truth: 1.2,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 120
+		  }, {
+		    name: "Shangla",
+		    column: "No",
+		    count: 8,
+		    truth: 1.3,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 130
+		  }, {
+		    name: "Buner",
+		    column: "No",
+		    count: 11,
+		    truth: 1.4,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 140
+		  }, {
+		    name: "Charsadda",
+		    column: "No",
+		    count: 7,
+		    truth: 1.4,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 140
+		  }, {
+		    name: "Kohat",
+		    column: "No",
+		    count: 6,
+		    truth: 1.6,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 160
+		  }, {
+		    name: "Karak",
+		    column: "No",
+		    count: 9,
+		    truth: 1.8,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 180
+		  }, {
+		    name: "Lower Dir",
+		    column: "No",
+		    count: 9,
+		    truth: 1.8,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 180
+		  }, {
+		    name: "Malakand",
+		    column: "No",
+		    count: 7,
+		    truth: 1.8,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 180
+		  }, {
+		    name: "Batagram",
+		    column: "No",
+		    count: 18,
+		    truth: 2.1,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 210
+		  }, {
+		    name: "Lakki Marwat",
+		    column: "No",
+		    count: 10,
+		    truth: 2.2,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 220
+		  }, {
+		    name: "Bannu",
+		    column: "No",
+		    count: 12,
+		    truth: 2.4,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 240
+		  }, {
+		    name: "Tank",
+		    column: "No",
+		    count: 14,
+		    truth: 2.5,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 250
+		  }, {
+		    name: "D. I. Khan",
+		    column: "No",
+		    count: 28,
+		    truth: 3.2,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 320
+		  }, {
+		    name: "Swat",
+		    column: "No",
+		    count: 13,
+		    truth: 3.2,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 320
+		  }, {
+		    name: "Chitral",
+		    column: "No",
+		    count: 7,
+		    truth: 3.4,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 340
+		  }, {
+		    name: "Upper Dir",
+		    column: "No",
+		    count: 23,
+		    truth: 3.5,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 350
+		  }, {
+		    name: "Kohistan",
+		    column: "No",
+		    count: 28,
+		    truth: 3.7,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 370
+		  }, {
+		    name: "Swabi",
+		    column: "No",
+		    count: 9,
+		    truth: 4.2,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 420
+		  }, {
+		    name: "Hangu",
+		    column: "No",
+		    count: 15,
+		    truth: 4.7,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 470
+		  }, {
+		    name: "Abbottabad",
+		    column: "No",
+		    count: 15,
+		    truth: 5.5,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 550
+		  }, {
+		    name: "Tor Ghar",
+		    column: "No",
+		    count: 62,
+		    truth: 8.9,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 890
+		  }, {
+		    name: "Mansehra",
+		    column: "No",
+		    count: 30,
+		    truth: 9.4,
+		    province: "Khyber Pakhtunkhwa",
+		    value: 940
+		  }]
+		}, {
+		  name: "Balochistan",
+		  data: [{
+		    name: "Kharan",
+		    column: "No",
+		    count: 1,
+		    truth: 0.4,
+		    province: "Balochistan",
+		    value: 40
+		  }, {
+		    name: "Nasirabad/Tamboo",
+		    column: "No",
+		    count: 4,
+		    truth: 0.7,
+		    province: "Balochistan",
+		    value: 70
+		  }, {
+		    name: "Musakhel",
+		    column: "No",
+		    count: 2,
+		    truth: 0.9,
+		    province: "Balochistan",
+		    value: 90
+		  }, {
+		    name: "Loralai",
+		    column: "No",
+		    count: 2,
+		    truth: 1,
+		    province: "Balochistan",
+		    value: 100
+		  }, {
+		    name: "Dera Bugti",
+		    column: "No",
+		    count: 6,
+		    truth: 1.1,
+		    province: "Balochistan",
+		    value: 110
+		  }, {
+		    name: "Jaffarabad",
+		    column: "No",
+		    count: 9,
+		    truth: 1.5,
+		    province: "Balochistan",
+		    value: 150
+		  }, {
+		    name: "Pishin",
+		    column: "No",
+		    count: 5,
+		    truth: 1.5,
+		    province: "Balochistan",
+		    value: 150
+		  }, {
+		    name: "Ziarat",
+		    column: "No",
+		    count: 8,
+		    truth: 1.9,
+		    province: "Balochistan",
+		    value: 190
+		  }, {
+		    name: "Kohlu",
+		    column: "No",
+		    count: 8,
+		    truth: 2.1,
+		    province: "Balochistan",
+		    value: 210
+		  }, {
+		    name: "Mastung",
+		    column: "No",
+		    count: 9,
+		    truth: 2.5,
+		    province: "Balochistan",
+		    value: 250
+		  }, {
+		    name: "Awaran",
+		    column: "No",
+		    count: 6,
+		    truth: 2.8,
+		    province: "Balochistan",
+		    value: 280
+		  }, {
+		    name: "Bolan/Kachhi",
+		    column: "No",
+		    count: 10,
+		    truth: 3,
+		    province: "Balochistan",
+		    value: 300
+		  }, {
+		    name: "Sibbi",
+		    column: "No",
+		    count: 8,
+		    truth: 3.4,
+		    province: "Balochistan",
+		    value: 340
+		  }, {
+		    name: "Washuk",
+		    column: "No",
+		    count: 14,
+		    truth: 3.5,
+		    province: "Balochistan",
+		    value: 350
+		  }, {
+		    name: "Killa Abdullah",
+		    column: "No",
+		    count: 20,
+		    truth: 4.3,
+		    province: "Balochistan",
+		    value: 430
+		  }, {
+		    name: "Nushki",
+		    column: "No",
+		    count: 10,
+		    truth: 4.4,
+		    province: "Balochistan",
+		    value: 440
+		  }, {
+		    name: "Killa Saifullah",
+		    column: "No",
+		    count: 13,
+		    truth: 4.6,
+		    province: "Balochistan",
+		    value: 460
+		  }, {
+		    name: "Chagai",
+		    column: "No",
+		    count: 17,
+		    truth: 5.5,
+		    province: "Balochistan",
+		    value: 550
+		  }, {
+		    name: "Khuzdar",
+		    column: "No",
+		    count: 26,
+		    truth: 6.9,
+		    province: "Balochistan",
+		    value: 690
+		  }, {
+		    name: "Quetta",
+		    column: "No",
+		    count: 21,
+		    truth: 7.2,
+		    province: "Balochistan",
+		    value: 720
+		  }, {
+		    name: "Kalat",
+		    column: "No",
+		    count: 18,
+		    truth: 7.8,
+		    province: "Balochistan",
+		    value: 780
+		  }, {
+		    name: "Zhob",
+		    column: "No",
+		    count: 52,
+		    truth: 9.7,
+		    province: "Balochistan",
+		    value: 970
+		  }, {
+		    name: "Harnai",
+		    column: "No",
+		    count: 58,
+		    truth: 12.8,
+		    province: "Balochistan",
+		    value: 1280
+		  }, {
+		    name: "Barkhan",
+		    column: "No",
+		    count: 101,
+		    truth: 16.4,
+		    province: "Balochistan",
+		    value: 1640
+		  }, {
+		    name: "Jhal Magsi",
+		    column: "No",
+		    count: 91,
+		    truth: 18,
+		    province: "Balochistan",
+		    value: 1800
+		  }, {
+		    name: "Lasbela",
+		    column: "No",
+		    count: 34,
+		    truth: 21.2,
+		    province: "Balochistan",
+		    value: 2120
+		  }, {
+		    name: "Sheerani",
+		    column: "No",
+		    count: 77,
+		    truth: 53.5,
+		    province: "Balochistan",
+		    value: 5350
+		  }]
+		}]
+
+});
+</script>
+
+</body>
+</html>

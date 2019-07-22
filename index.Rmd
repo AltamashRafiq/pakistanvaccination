@@ -1,0 +1,4 @@
+```{r}
+htmltools::includeHTML("/Users/altamashrafiq/pakistanvaccination/not_vacc.html")
+```
+
