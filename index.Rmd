@@ -1,4 +1,4 @@
-```{r}
+```{r, echo = FALSE}
 htmltools::includeHTML("/Users/altamashrafiq/pakistanvaccination/not_vacc.html")
 ```
 

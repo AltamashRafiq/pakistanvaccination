@@ -1,6 +1,6 @@
 name: "my-website"
 navbar:
-  title: "Children Not Vaccinated in Pakistan (PSLM 2014)"
+  title: "CERP Analytics"
   left:
     - text: "Children Not Vaccinated in Pakistan (PSLM 2014)"
       href: index.html
